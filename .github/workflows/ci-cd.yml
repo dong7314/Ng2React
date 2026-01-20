@@ -32,7 +32,7 @@ jobs:
       - name: Checkout infra-manifests repo
         uses: actions/checkout@v4
         with:
-          repository: ORG/infra-manifests
+          repository: dong7314/infra-manifests
           token: ${{ secrets.GH_TOKEN }}
           path: infra
 
