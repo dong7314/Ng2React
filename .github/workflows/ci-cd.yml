@@ -50,7 +50,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add frontend/ng2react/deployment.yaml
-          git commit -m "deploy: ng2react ${{ github.sha }}"
+          git commit -m "[fe-deploy]: ng2react ${{ github.sha }}"
           git push
 
       - name: Docker cleanup
