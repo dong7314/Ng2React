@@ -27,7 +27,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.HARBOR_REGISTRY }}/frontend/ng2react:${{ github.sha }}
+            ${{ secrets.HARBOR_REGISTRY }}/ng2react/ng2react-ui:${{ github.sha }}
 
       - name: Checkout infra-manifests repo
         uses: actions/checkout@v4
@@ -40,7 +40,7 @@ jobs:
         shell: powershell
         run: |
           $file = "infra/frontend/ng2react/deployment.yaml"
-          $image = "${{ secrets.HARBOR_REGISTRY }}/frontend/ng2react:${{ github.sha }}"
+          $image = "${{ secrets.HARBOR_REGISTRY }}/ng2react/ng2react-ui:${{ github.sha }}"
           (Get-Content $file) -replace 'image:\s.*ng2react:.*', "image: $image" | Set-Content $file
 
       - name: Commit & Push infra-manifests
