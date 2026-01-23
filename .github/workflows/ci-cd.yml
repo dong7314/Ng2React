@@ -41,7 +41,11 @@ jobs:
         run: |
           $file = "infra/frontend/ng2react/deployment.yaml"
           $image = "${{ secrets.HARBOR_REGISTRY }}/ng2react/ng2react-ui:${{ github.sha }}"
-          (Get-Content $file) -replace 'image:\s.*ng2react:.*', "image: $image" | Set-Content $file
+
+          (Get-Content $file) -replace 'image:.*ng2react.*', "image: $image" | Set-Content $file
+
+          Write-Host "--- Updated File Content Check ---"
+          Get-Content $file | Select-String "image:"
 
       - name: Commit & Push infra-manifests
         shell: powershell
