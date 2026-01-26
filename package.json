@@ -2,7 +2,7 @@
   "name": "ng2react-monorepo",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter ng2react-web dev",
+    "dev": "pnpm --filter @ng2react/web dev",
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test"
