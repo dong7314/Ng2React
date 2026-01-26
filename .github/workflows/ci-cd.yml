@@ -25,6 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: apps/web/Dockerfile
           push: true
           tags: |
             ${{ secrets.HARBOR_REGISTRY }}/ng2react/ng2react-ui:${{ github.sha }}
