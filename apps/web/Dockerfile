@@ -10,7 +10,7 @@ COPY package.json pnpm-workspace.yaml pnpm-lock.yaml* ./
 COPY apps/web/package.json ./apps/web/package.json
 RUN pnpm install --frozen-lockfile
 COPY . .
-RUN pnpm --filter web build
+RUN pnpm --filter ng2react-web build
 
 FROM nginx:alpine
 RUN rm /etc/nginx/conf.d/default.conf
