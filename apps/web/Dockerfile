@@ -6,8 +6,9 @@ RUN corepack enable
 
 WORKDIR /app
 COPY package.json pnpm-workspace.yaml pnpm-lock.yaml* ./
-
+COPY packages/ui/package.json ./packages/ui/package.json
 COPY apps/web/package.json ./apps/web/package.json
+
 RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm --filter @ng2react/web build
