@@ -1,0 +1,39 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Ng2React Favicon with Rounded Background"
+>
+  <rect x="0" y="0" width="64" height="64" rx="12" ry="12" fill="#262626" />
+  <defs>
+    <linearGradient id="logoGradientBG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M24 18L8 32L24 46"
+    stroke="white"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <path
+    d="M40 18L56 32L40 46"
+    stroke="white"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <path
+    d="M28 32H36M33 28L38 32L33 36"
+    stroke="white"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+</svg>

@@ -1,25 +1,67 @@
-import { Button } from "@ng2react/ui/components/ui/button";
+import NaverIcon from "@/assets/company-logo/naver.svg";
+import KakaoIcon from "@/assets/company-logo/kakao.svg";
+import GoogleIcon from "@/assets/company-logo/google.svg";
+import GithubIcon from "@/assets/company-logo/github.svg";
 
-const styles = {
-  container: "flex h-screen w-full items-center justify-center bg-muted/40",
-  card: "w-full max-w-sm space-y-4 rounded-lg border bg-card p-6 shadow-sm",
-  header: "space-y-2 text-center",
-  title: "text-2xl font-bold",
-  desc: "text-sm text-muted-foreground",
-};
+import { Logo } from "@/shared/components/logo/logo";
+import { Button } from "@ng2react/ui/components/ui/button";
+import { ThemeToggle } from "@/shared/components/layout-actions/theme-toggle";
 
 export default function LoginPage() {
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>Ng2React</h1>
-          <p className={styles.desc}>Sign in to convert your components</p>
+      <div className={styles.toggleContainer}>
+        <ThemeToggle />
+      </div>
+      <div className={styles.header}>
+        <div className={styles.logoBox}>
+          <Logo size={80} />
         </div>
-        <Button className="w-full" size="lg">
-          Sign In with SSO
+        <h1 className={styles.title}>Ng2React</h1>
+        <p className={styles.desc}>
+          Convert Angular components to React with AI
+        </p>
+      </div>
+      <div className={styles.card}>
+        <h2 className={styles.signHeader}>Sign in to continue</h2>
+        <Button className="w-full" variant="gray" size="lg">
+          <img src={GoogleIcon} alt="Google login" className={styles.icon} />
+          Continue with Google
+        </Button>
+        <Button className="w-full" variant="panel" size="lg">
+          <img src={GithubIcon} alt="Github login" className={styles.icon} />
+          Continue with Github
+        </Button>
+        <Button
+          className="w-full bg-[#03A94D] hover:bg-[#038f42] text-white"
+          variant="panel"
+          size="lg"
+        >
+          <img src={NaverIcon} alt="Naver login" className={styles.icon} />
+          Continue with Naver
+        </Button>
+        <Button
+          className="w-full bg-[#FEE500] hover:bg-[#e4cd01] text-[rgba(0,0,0,0.85)]"
+          variant="panel"
+          size="lg"
+        >
+          <img src={KakaoIcon} alt="Kakao login" className={styles.icon} />
+          Continue with Kakao
         </Button>
       </div>
     </div>
   );
 }
+
+const styles = {
+  container:
+    "relative flex flex-col h-screen w-full items-center justify-center bg-background",
+  toggleContainer: "absolute top-6 right-6",
+  header: "mb-8 text-center",
+  logoBox: "inline-flex p-1 mb-5 border-[2px] rounded-3xl",
+  title: "mb-1 text-2xl font-bold",
+  desc: "text-muted-foreground font-light",
+  card: "w-full max-w-sm space-y-4 rounded-lg border bg-card p-6 shadow-sm",
+  signHeader: "text-center text-lg font-semibold",
+  icon: "w-6 h-6",
+};
