@@ -1,5 +1,5 @@
 import { Button } from "@ng2react/ui/components/ui/button";
-import { ThemeToggle } from "@/shared/components/layout-actions/theme-toggle";
+import { ThemeToggle } from "@/shared/components/actions/theme-toggle";
 
 const headerStyles = {
   container:

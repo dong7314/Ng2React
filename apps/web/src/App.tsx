@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import LoginPage from "@/features/auth/pages/login-page";
-import MainLayout from "@/shared/components/layout/main-layout";
+import MainLayout from "@/shared/components/converter/layout/main-layout";
 import ConverterPage from "@/features/converter/pages/converter-page";
 
 const router = createBrowserRouter([
